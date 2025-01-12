@@ -5,15 +5,28 @@
     box-sizing: border-box;
 }
 
+:root {
+    --body-color: #efefef;
+    --nav-color: #1876f2;
+    --bg-color: #fff;
+}
+
+.dark-theme {
+    --body-color: #0a0a0a;
+    --nav-color: #000;
+    --bg-color: #000;   
+}
+
 body {
-    background: #efefef;
+    background: var(--body-color);
+    transition: background 0.3s;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1876f2;
+    background: var(--nav-color);
     padding: 5px 5%;
     position: sticky;
     top: 0;
@@ -106,7 +119,7 @@ nav {
     position: sticky;
     top: 70px;
     align-self: flex-start;
-    background: #fff;
+    background: var(--bg-color);
     padding: 20px;
     border-radius: 4px;
     color: #626262;
@@ -303,7 +316,7 @@ nav {
 
 .write-post-container {
     width: 100%;
-    background: #fff;
+    background: var(--bg-color);
     border-radius: 6px;
     padding: 20px;
     color: #626262;
@@ -365,7 +378,7 @@ nav {
 
 .post-container {
     width: 100%;
-    background: #fff;
+    background: var(--bg-color);
     border-radius: 6px;
     padding: 20px;
     color: #626262;
@@ -457,7 +470,7 @@ footer {
     position: absolute;
     width: 90%;
     max-width: 350px;
-    background: #fff;
+    background: var(--bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius: 4px;
     overflow: hidden;
@@ -532,5 +545,54 @@ footer {
 
 #dark-btn.dark-btn-on {
     padding-left: 23px;
-    background: #000;
+    background: #0a0a0a;
+}
+
+
+/* ---------- profile page ---------- */
+
+.profile-container {
+    padding: 20px 15%;
+    color: #626262;
+}
+
+.cover-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.profile-details {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.profile-details-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile-details-image {
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 6px;
+}
+
+.profile-details-row div h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.profile-details-row div p {
+    font-size: 13px;
+}
+
+.profile-details-row div img {
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 12px;
 }
